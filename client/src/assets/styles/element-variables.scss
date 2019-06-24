@@ -1,0 +1,35 @@
+/* 改变 icon 字体路径变量*/
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import "~element-ui/packages/theme-chalk/src/index";
+
+/*
+  Custom style rules below
+ */
+$--font-size-extra-large: 20px !default;
+/// fontSize|1|Font Size|0
+$--font-size-large: 18px !default;
+/// fontSize|1|Font Size|0
+$--font-size-medium: 14px !default;
+/// fontSize|1|Font Size|0
+$--font-size-base: 13px !default;
+/// fontSize|1|Font Size|0
+$--font-size-small: 12px !default;
+/// fontSize|1|Font Size|0
+$--font-size-extra-small: 11px !default;
+/// fontWeight|1|Font Weight|1
+$--font-weight-primary: 500 !default;
+/// fontWeight|1|Font Weight|1
+$--font-weight-secondary: 100 !default;
+/// fontLineHeight|1|Line Height|2
+$--font-line-height-primary: 24px !default;
+/// fontLineHeight|1|Line Height|2
+$--font-line-height-secondary: 16px !default;
+
+/*
+  Clear body style
+ */
+
+body {
+  margin: 0;
+}
