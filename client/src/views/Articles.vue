@@ -34,33 +34,31 @@
       </el-col>
       <!-- Right Panel -->
       <el-col :span="5">
-        <div class="view-side">
-          <div class="view-side" style="position: fixed; padding-right: 50px">
-            <div class="intro">
-              <el-card shadow="hover">
-                <p>Envision Articles 是用文章的形式记录生活灵感、分享技术心得的方式。</p>
-                <p>浏览你感兴趣的文章，赞赏作者，或者点击下面的按钮也试着撰写一篇新的文章。</p>
-              </el-card>
-            </div>
-
-            <el-row type="flex" justify="space-between" class="control">
-              <el-col>
-                <el-tooltip placement="bottom" content="发表文章">
-                  <el-button icon="envision-pengyoufill" circle></el-button>
-                </el-tooltip>
-              </el-col>
-              <el-col>
-                <el-tooltip placement="bottom" content="我的收藏">
-                  <el-button icon="envision-icon_star" circle></el-button>
-                </el-tooltip>
-              </el-col>
-              <el-col>
-                <el-tooltip placement="bottom" content="我的草稿">
-                  <el-button icon="envision-icon_workset" circle></el-button>
-                </el-tooltip>
-              </el-col>
-            </el-row>
+        <div class="view-side" style="position: fixed; padding-right: 50px">
+          <div class="intro">
+            <el-card shadow="hover">
+              <p>Envision Articles 允许用文章的形式记录生活灵感、分享技术心得、交流学习经验。</p>
+              <p>在这里浏览你感兴趣的文章，赞赏或评论作者，或者点击下面的按钮也试着撰写一篇新的文章。</p>
+            </el-card>
           </div>
+
+          <el-row type="flex" justify="space-between" class="control">
+            <el-col>
+              <el-tooltip placement="bottom" content="发表文章">
+                <el-button icon="el-icon-edit" circle></el-button>
+              </el-tooltip>
+            </el-col>
+            <el-col>
+              <el-tooltip placement="bottom" content="我的收藏">
+                <el-button icon="el-icon-star-on" circle></el-button>
+              </el-tooltip>
+            </el-col>
+            <el-col>
+              <el-tooltip placement="bottom" content="我的创作">
+                <el-button icon="envision-icon_invite_fill" circle></el-button>
+              </el-tooltip>
+            </el-col>
+          </el-row>
         </div>
       </el-col>
     </el-row>

@@ -35,8 +35,31 @@
       </el-col>
       <!-- Right Panel -->
       <el-col :span="5">
-        <div class="view-side">
+        <div class="view-side" style="position: fixed; padding-right: 50px">
+          <div class="intro">
+            <el-card shadow="hover">
+              <p>Envision Direct-Answers 允许就某一技术性问题邀请指定用户回答。</p>
+              <p>浏览你感兴趣的问题，查看受邀用户的回答；也可以在未被邀请的情况下尝试回答你擅长的问题。同样，你可以点击下面的按钮，提出你的疑问并邀请一位你指定的用户为你解惑。</p>
+            </el-card>
+          </div>
 
+          <el-row type="flex" justify="space-between" class="control">
+            <el-col>
+              <el-tooltip placement="bottom" content="发表问题">
+                <el-button icon="envision-icon_addmessage" circle></el-button>
+              </el-tooltip>
+            </el-col>
+            <el-col>
+              <el-tooltip placement="bottom" content="我的收藏">
+                <el-button icon="el-icon-star-on" circle></el-button>
+              </el-tooltip>
+            </el-col>
+            <el-col>
+              <el-tooltip placement="bottom" content="我的直答">
+                <el-button icon="envision-icon_invite_fill" circle></el-button>
+              </el-tooltip>
+            </el-col>
+          </el-row>
         </div>
       </el-col>
     </el-row>
@@ -56,13 +79,24 @@
 </script>
 
 <style scoped>
-  .view-main > h2 {
-
+  .view-side {
+    margin-left: 50px;
+  }
+  .view-side > .control {
+    text-align: center;
+  }
+  .view-side > .intro {
+    margin: 20px 0;
   }
 </style>
 
 <style>
   .el-collapse-item__content {
+    padding-bottom: 0;
+  }
+  .view-side .el-card__body {
+    font-size: 13px;
+    padding-top: 0;
     padding-bottom: 0;
   }
 </style>

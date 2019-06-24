@@ -17,7 +17,7 @@
       </el-row>
     </div>
     <div class="section-actions">
-      <el-button round size="small" icon="envision-xiangxia2"> 查看更多</el-button>
+      <el-button round size="small" icon="el-icon-arrow-down"> 查看更多</el-button>
     </div>
 
     <!-- Articles Section -->
@@ -30,7 +30,7 @@
       </el-row>
     </div>
     <div class="section-actions">
-      <el-button round size="small" icon="envision-xiangxia2"> 查看更多</el-button>
+      <el-button round size="small" icon="el-icon-arrow-down"> 查看更多</el-button>
     </div>
 
     <!-- Questions Section -->
@@ -43,7 +43,7 @@
       </el-row>
     </div>
     <div class="section-actions">
-      <el-button round size="small" icon="envision-xiangxia2"> 查看更多</el-button>
+      <el-button round size="small" icon="el-icon-arrow-down"> 查看更多</el-button>
     </div>
 
     <!-- Users Section -->

@@ -26,7 +26,7 @@
           <el-dropdown-item><i class="envision-icon_people_fill"></i> 个人中心</el-dropdown-item>
           <el-dropdown-item><i class="envision-icon_invite_fill"></i> 我的草稿</el-dropdown-item>
           <el-dropdown-item><i class="envision-icon_setting_fill"></i> 系统设置</el-dropdown-item>
-          <el-dropdown-item divided><i class="envision-icon-logout"></i> 注销会话</el-dropdown-item>
+          <el-dropdown-item divided><i class="el-icon-switch-button"></i> 注销会话</el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
     </el-menu-item>
