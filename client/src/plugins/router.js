@@ -10,6 +10,8 @@ const main = () => import('../views/Home.vue');
 const groups = () => import('../views/Groups.vue');
 const articles = () => import('../views/Articles.vue');
 const questions = () => import('../views/Questions.vue');
+const giftShop = () => import('../views/GiftShop.vue');
+const hof = () => import('../views/HallOfFame.vue');
 
 /*
   Config Paths
@@ -35,6 +37,16 @@ export default new Router({
       path: '/questions',
       component: questions,
       name: 'questions'
+    },
+    {
+      path: '/gift-shop',
+      component: giftShop,
+      name: 'gift-shop'
+    },
+    {
+      path: '/hof',
+      component: hof,
+      name: 'hof'
     }
   ]
 })
