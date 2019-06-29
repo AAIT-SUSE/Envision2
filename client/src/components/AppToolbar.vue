@@ -17,6 +17,12 @@
       <el-menu-item index="gift-shop">礼品店</el-menu-item>
       <el-menu-item index="hof">名人堂</el-menu-item>
       <el-menu-item index="code-base">代码库</el-menu-item>
+      <el-submenu index="desktop-sub-nav" class="hidden-md-and-down">
+        <template slot="title">创作</template>
+        <el-menu-item index="gift-shop">新文章</el-menu-item>
+        <el-menu-item index="hof">新问题</el-menu-item>
+        <el-menu-item index="code-base"></el-menu-item>
+      </el-submenu>
     </el-submenu>
 
     <el-menu-item index="9" style="float: right;">
@@ -72,10 +78,8 @@
       searchInput: '',
     }),
     methods: {
-      Redirect(key) {
-        console.log(key, this.$route.name);
-
-        switch (key) {
+      Redirect(index) {
+        switch (index) {
           case 'main':
             this.$router.push('/main');
             break;

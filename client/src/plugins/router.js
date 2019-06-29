@@ -12,6 +12,7 @@ const articles = () => import('../views/Articles.vue');
 const questions = () => import('../views/Questions.vue');
 const giftShop = () => import('../views/GiftShop.vue');
 const hof = () => import('../views/HallOfFame.vue');
+const create = () => import('../views/Create.vue');
 
 /*
   Config Paths
@@ -47,6 +48,11 @@ export default new Router({
       path: '/hof',
       component: hof,
       name: 'hof'
+    },
+    {
+      path: '/create',
+      component: create,
+      name: 'create'
     }
   ]
 })
