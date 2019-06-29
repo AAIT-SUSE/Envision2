@@ -19,9 +19,8 @@
       <el-menu-item index="code-base">代码库</el-menu-item>
       <el-submenu index="desktop-sub-nav" class="hidden-md-and-down">
         <template slot="title">创作</template>
-        <el-menu-item index="gift-shop">新文章</el-menu-item>
-        <el-menu-item index="hof">新问题</el-menu-item>
-        <el-menu-item index="code-base"></el-menu-item>
+        <el-menu-item index="create/article">新文章</el-menu-item>
+        <el-menu-item index="create/question">新问题</el-menu-item>
       </el-submenu>
     </el-submenu>
 

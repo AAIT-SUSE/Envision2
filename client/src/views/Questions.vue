@@ -2,7 +2,7 @@
   <div class="view-container">
     <el-row>
       <!-- Main View -->
-      <el-col :span="19">
+      <el-col :md=24 :lg=19>
         <div class="view-main">
           <h2>直答 DIRECT ANSWERS</h2>
           <el-collapse v-model="expansion" @change="handleChange">
@@ -34,7 +34,7 @@
         </div>
       </el-col>
       <!-- Right Panel -->
-      <el-col :span="5">
+      <el-col :span="5" class="hidden-md-and-down">
         <div class="view-side" style="position: fixed; padding-right: 50px">
           <div class="intro">
             <el-card shadow="hover">

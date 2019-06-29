@@ -2,7 +2,7 @@
   <div class="view-container">
     <el-row>
       <!-- Main View -->
-      <el-col :span="19">
+      <el-col :md=24 :lg=19>
         <div class="view-main">
           <h2>群组 GROUPS</h2>
           <el-collapse v-model="expansion" @change="handleChange" style="margin-bottom: 10px">
