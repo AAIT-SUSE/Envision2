@@ -15,6 +15,12 @@ const hof = () => import('../views/HallOfFame.vue');
 const create = () => import('../views/Create.vue');
 
 /*
+  Import Subviews
+ */
+const createArticle = () => import('../components/CreateArticle.vue');
+const createQuestion = () => import('../components/CreateQuestion.vue');
+
+/*
   Config Paths
  */
 export default new Router({
@@ -51,8 +57,20 @@ export default new Router({
     },
     {
       path: '/create',
+      name: 'create',
       component: create,
-      name: 'create'
-    }
+      children: [
+        {
+          path: 'article',
+          name: 'create-article',
+          component: createArticle
+        },
+        {
+          path: 'question',
+          name: 'create-question',
+          component: createQuestion
+        },
+      ]
+    },
   ]
 })

@@ -5,7 +5,11 @@
       <el-col :md=24 :lg=19>
         <div class="view-main">
           <h2>创作 CREATE</h2>
-
+          <el-tabs v-model="$route.name" @tab-click="handleClick">
+            <el-tab-pane label="创作文章" name="create-article"></el-tab-pane>
+            <el-tab-pane label="创建问题" name="create-question"></el-tab-pane>
+          </el-tabs>
+          <router-view></router-view>
         </div>
       </el-col>
       <!-- Right Panel -->
@@ -47,14 +51,25 @@
 
   export default {
     name: 'app',
-    data() {
-      return {
-        editor: ClassicEditor,
-        editorData: '<p>Content of the editor.</p>',
-        editorConfig: {
-          language: 'zh-cn'
+    data:() => ({
+      editor: ClassicEditor,
+      editorData: '<p>Content of the editor.</p>',
+      editorConfig: {
+        language: 'zh-cn'
+      },
+      activeTabName: '',
+    }),
+    methods: {
+      handleClick(tab) {
+        if (tab.name === 'create-article') {
+          this.$router.push('/create/article')
+        } else {
+          this.$router.push('/create/question')
         }
-      };
+      }
+    },
+    mounted() {
+      console.log(this.$route);
     }
   }
 </script>
