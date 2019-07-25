@@ -1,9 +1,9 @@
 <template>
   <el-menu :default-active="$route.name" class="el-nav" mode="horizontal" @select="Redirect">
-    <el-menu-item class="hidden-md-and-down">
+    <el-menu-item class="hidden-md-and-down no-active-mark">
       <img :src="logoTextSrc" alt="Envision" class="logo">
     </el-menu-item>
-    <el-menu-item class="hidden-lg-and-up">
+    <el-menu-item class="hidden-lg-and-up no-active-mark">
       <img :src="logoSrc" alt="Envision" class="logo">
     </el-menu-item>
 
@@ -24,19 +24,19 @@
       </el-submenu>
     </el-submenu>
 
-    <el-menu-item index="9" style="float: right;">
-      <el-dropdown>
+    <el-menu-item style="float: right;" class="no-active-mark">
+      <el-dropdown @command="UserDropdownCommand">
         <avatar username="Owen Tsai" :size="50"></avatar>
         <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item><i class="envision-icon_people_fill"></i> 个人中心</el-dropdown-item>
-          <el-dropdown-item><i class="envision-icon_invite_fill"></i> 我的草稿</el-dropdown-item>
-          <el-dropdown-item><i class="envision-icon_setting_fill"></i> 系统设置</el-dropdown-item>
-          <el-dropdown-item divided><i class="el-icon-switch-button"></i> 注销会话</el-dropdown-item>
+          <el-dropdown-item command="profile"><i class="envision-icon_people_fill"></i> 个人中心</el-dropdown-item>
+          <el-dropdown-item command="draft"><i class="envision-icon_invite_fill"></i> 我的草稿</el-dropdown-item>
+          <el-dropdown-item command="settings"><i class="envision-icon_setting_fill"></i> 系统设置</el-dropdown-item>
+          <el-dropdown-item command="logout" divided><i class="el-icon-switch-button"></i> 注销会话</el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
     </el-menu-item>
 
-    <el-menu-item style="float: right" class="hidden-md-and-down">
+    <el-menu-item style="float: right" class="hidden-md-and-down no-active-mark">
       <el-input placeholder="请输入内容" v-model="searchInput" class="input-with-select">
         <el-select v-model="select" slot="prepend" placeholder="请选择" id="search-prepend-select">
           <el-option label="全部" value="all"></el-option>
@@ -115,6 +115,17 @@
             this.$router.push('/create/question');
             break;
         }
+      },
+      UserDropdownCommand(command) {
+        switch (command) {
+          case 'profile':
+            this.$router.push('/u-center');
+            break;
+
+          case 'draft':
+            this.$router.push('/u-center');
+            break;
+        }
       }
     }
   }
@@ -131,6 +142,9 @@
     position: fixed;
     width: 100%;
     z-index: 199;
+  }
+  .no-active-mark {
+    border-bottom: 0 !important;
   }
 </style>
 

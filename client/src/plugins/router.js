@@ -13,6 +13,7 @@ const questions = () => import('../views/Questions.vue');
 const giftShop = () => import('../views/GiftShop.vue');
 const hof = () => import('../views/HallOfFame.vue');
 const create = () => import('../views/Create.vue');
+const uCenter = () => import('../views/UCenter.vue');
 
 /*
   Import Subviews
@@ -54,6 +55,11 @@ export default new Router({
       path: '/hof',
       component: hof,
       name: 'hof'
+    },
+    {
+      path: '/u-center',
+      component: uCenter,
+      name: 'u-center'
     },
     {
       path: '/create',
