@@ -17,7 +17,7 @@
         <div class="view-side" style="position: fixed; padding-right: 50px">
           <div class="intro">
             <el-card shadow="hover">
-              <p>Envision Create 集成了一个强大的富文本编辑器，可以很方便地创建、编辑、排版文字，并添加图片、视频、代码等元素。同时，Envision Create 也支持多人协同编辑，提高社团事务效率。</p>
+              <p>Envision Create 集成了一个强大的富文本编辑器，可以很方便地创建、编辑、排版文字，并添加图片、视频、代码等元素</p>
               <p>当你有想要记录和分享的东西，别忘了使用Envision Create！</p>
             </el-card>
           </div>
@@ -46,18 +46,9 @@
 </template>
 
 <script>
-  import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-  import '@ckeditor/ckeditor5-build-classic/build/translations/zh-cn'
-
   export default {
     name: 'app',
     data:() => ({
-      editor: ClassicEditor,
-      editorData: '<p>Content of the editor.</p>',
-      editorConfig: {
-        language: 'zh-cn'
-      },
-      activeTabName: '',
     }),
     methods: {
       handleClick(tab) {

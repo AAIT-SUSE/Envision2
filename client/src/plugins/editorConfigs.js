@@ -1,27 +1,25 @@
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
-import Font from '@ckeditor/ckeditor5-font/src/font'
-import '@ckeditor/ckeditor5-build-classic/build/translations/zh-cn'
+const toolbarOptions = [
+  ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+  ['blockquote', 'code-block'],
 
-ClassicEditor.catch(error => console.log(error));
+  [{ 'align': [] }],
+  ['image'],
 
-export default {
-  data:() => ({
-    editor: ClassicEditor,
-    editorData: '',
-    editorConfig: {
-      language: 'zh-cn',
-      plugins: [Font,],
-      fontSize: {
-        options: [8, 9, 10, 11, 12, 'default', 14, 16, 18, 20, 22, 24, 26, 28, 36, 44, 48, 72],
-      },
-      fontFamily: {
-        options: [
-          'default',
-          'Ubuntu, Arial, sans-serif',
-          'Ubuntu Mono, Courier New, Courier, monospace'
-        ]
-      },
-      toolbar: [ 'fontFamily', 'fontSize', '|', 'link' ]
-    },
-  }),
-}
+  [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+  [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
+  [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
+
+  [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
+  [{ 'header': [1, 2, 3, 4, false] }],
+
+  [{ 'color': [] }],          // dropdown with defaults from theme
+];
+
+const editorConfigFull = {
+  placeholder: '点击此处输入内容...',
+  modules: {
+    toolbar: toolbarOptions
+  }
+};
+
+export default editorConfigFull;

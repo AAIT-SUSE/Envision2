@@ -1,7 +1,7 @@
 <template>
   <el-card>
-    <div class="card-image">
-      <el-image src="https://cube.elemecdn.com/6/94/4d3ea53c084bad6931a56d5158a48jpeg.jpeg"></el-image>
+    <div class="card-image" v-if="coverImage">
+      <el-image :src="coverImage" fit="cover"></el-image>
     </div>
     <div class="card-title">
       <h4>{{ title }}</h4>
@@ -14,8 +14,8 @@
       </div>
     </div>
     <div class="card-actions">
-      <span class="context">123 次赞同</span>
-      <el-button size="mini">分享链接</el-button>
+      <span class="context">123 赞同</span>
+      <el-button size="mini" icon="envision-zantong"> 赞同</el-button>
       <el-button size="mini">阅读全文</el-button>
     </div>
   </el-card>
@@ -24,10 +24,10 @@
 <script>
   import Avatar from "vue-avatar/src/Avatar";
   export default {
-    name: 'article-card',
-    components: {Avatar},
+    components: { Avatar },
     data: () => ({
-      title: '写给哈批的Vue.js教程（一）'
+      title: '写给哈批的Vue.js教程（一）',
+      coverImage: 'https://cube.elemecdn.com/6/94/4d3ea53c084bad6931a56d5158a48jpeg.jpeg'
     }),
 
   }

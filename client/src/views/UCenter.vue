@@ -20,9 +20,21 @@
     </div>
 
     <div class="user-main">
-      <el-row>
-        <el-col></el-col>
-        <el-col></el-col>
+      <el-row :gutter="20">
+        <el-col :lg="16" :md="24">
+          <el-tabs v-model="$route.name" type="card" @tab-click="handleTabClick" :stretch="true">
+            <el-tab-pane label="文章" name="my-articles"></el-tab-pane>
+            <el-tab-pane label="提问" name="my-questions"></el-tab-pane>
+            <el-tab-pane label="回答" name="my-answers"></el-tab-pane>
+            <el-tab-pane label="群组" name="my-groups"></el-tab-pane>
+          </el-tabs>
+          <router-view></router-view>
+        </el-col>
+        <el-col :span="8" class="hidden-md-and-down">
+          <el-card shadow="none">
+            <h4 style="text-align: center">成就 | ACHIEVEMENTS</h4>
+          </el-card>
+        </el-col>
       </el-row>
     </div>
   </div>
@@ -37,7 +49,31 @@
     },
     data: () => ({
 
-    })
+    }),
+    methods: {
+      handleTabClick(tab) {
+        switch (tab.name) {
+          case "my-articles":
+            this.$router.push('/u-center/articles');
+            break;
+
+          case "my-questions":
+            this.$router.push('/u-center/questions');
+            break;
+
+          case "my-answers":
+            this.$router.push('/u-center/answers');
+            break;
+
+          default:
+            this.$router.push('/u-center/groups');
+            break;
+        }
+      }
+    },
+    mounted() {
+
+    }
   }
 </script>
 
@@ -53,11 +89,11 @@
   #avatar {
     position: relative;
     margin: 0 auto;
-    top: -50px;
+    top: -65px;
   }
   .card-user-profile > .info {
     position: relative;
-    top: -50px;
+    top: -65px;
     text-align: center;
     font-size: 13px;
     line-height: 1;
@@ -67,5 +103,8 @@
   }
   .card-user-actions {
     text-align: center;
+  }
+  .user-main {
+    margin-top: 20px;
   }
 </style>

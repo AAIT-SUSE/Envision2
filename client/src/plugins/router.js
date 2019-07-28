@@ -20,6 +20,9 @@ const uCenter = () => import('../views/UCenter.vue');
  */
 const createArticle = () => import('../components/CreateArticle.vue');
 const createQuestion = () => import('../components/CreateQuestion.vue');
+const myArticle = () => import('../components/UCenterArticle.vue');
+const myQuestion = () => import('../components/UCenterQuestion.vue');
+const myGroup = () => import('../components/UCenterGroup.vue');
 
 /*
   Config Paths
@@ -58,8 +61,31 @@ export default new Router({
     },
     {
       path: '/u-center',
+      name: 'u-center',
       component: uCenter,
-      name: 'u-center'
+      redirect: '/u-center/articles',
+      children: [
+        {
+          path: 'articles',
+          name: 'my-articles',
+          component: myArticle
+        },
+        {
+          path: 'questions',
+          name: 'my-questions',
+          component: myQuestion
+        },
+        {
+          path: 'answers',
+          name: 'my-answers',
+          component: myQuestion
+        },
+        {
+          path: 'groups',
+          name: 'my-groups',
+          component: myGroup
+        },
+      ]
     },
     {
       path: '/create',
