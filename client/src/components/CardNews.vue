@@ -58,9 +58,3 @@
     text-align: right;
   }
 </style>
-
-<style>
-  .el-card__body {
-    padding-bottom: 14px;
-  }
-</style>

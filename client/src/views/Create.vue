@@ -14,7 +14,7 @@
       </el-col>
       <!-- Right Panel -->
       <el-col :span="5" class="hidden-md-and-down">
-        <div class="view-side" style="position: fixed; padding-right: 50px">
+        <div class="view-side pos-fixed p-right-50">
           <div class="intro">
             <el-card shadow="hover">
               <p>Envision Create 集成了一个强大的富文本编辑器，可以很方便地创建、编辑、排版文字，并添加图片、视频、代码等元素</p>
@@ -29,13 +29,13 @@
               </el-tooltip>
             </el-col>
             <el-col>
-              <el-tooltip placement="bottom" content="购物记录">
-                <el-button icon="envision-quan" circle></el-button>
+              <el-tooltip placement="bottom" content="快速保存">
+                <el-button icon="envision-icon_invite_fill" circle></el-button>
               </el-tooltip>
             </el-col>
             <el-col>
-              <el-tooltip placement="bottom" content="清空购物车">
-                <el-button icon="envision-icon_trashcan" circle></el-button>
+              <el-tooltip placement="bottom" content="我的草稿">
+                <el-button icon="envision-icon_compile" circle></el-button>
               </el-tooltip>
             </el-col>
           </el-row>

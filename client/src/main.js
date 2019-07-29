@@ -4,7 +4,7 @@ import router from './plugins/router'
 import './plugins/element'
 import './plugins/editor'
 import './assets/iconfont/iconfont.css'
-import './assets/styles/custom-global-style.css'
+import './assets/styles/custom-global-style.scss'
 
 Vue.config.productionTip = false;
 

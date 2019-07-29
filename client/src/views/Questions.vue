@@ -5,7 +5,7 @@
       <el-col :md=24 :lg=19>
         <div class="view-main">
           <h2>直答 DIRECT ANSWERS</h2>
-          <el-collapse v-model="expansion" @change="handleChange">
+          <el-collapse v-model="expansion" @change="">
             <el-collapse-item title="筛选策略" name="1">
               <el-form ref="form" label-width="100px">
                 <el-form-item label="排序方式">
@@ -35,7 +35,7 @@
       </el-col>
       <!-- Right Panel -->
       <el-col :span="5" class="hidden-md-and-down">
-        <div class="view-side" style="position: fixed; padding-right: 50px">
+        <div class="view-side p-right-50">
           <div class="intro">
             <el-card shadow="hover">
               <p>Envision Direct-Answers 允许就某一技术性问题邀请指定用户回答。</p>

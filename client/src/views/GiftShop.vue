@@ -37,7 +37,7 @@
       </el-col>
       <!-- Right Panel -->
       <el-col :span="5" class="hidden-md-and-down">
-        <div class="view-side" style="position: fixed; padding-right: 50px">
+        <div class="view-side pos-fixed p-right-50">
           <div class="intro">
             <el-card shadow="hover">
               <p>Envision Gift Shop 允许使用EC积分兑换虚拟或实体的礼品。这些礼品使用社团经费购置，并用于奖励和表彰社团优秀个人。</p>

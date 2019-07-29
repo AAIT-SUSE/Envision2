@@ -34,7 +34,7 @@
       </el-col>
       <!-- Right Panel -->
       <el-col :span="5" class="hidden-md-and-down">
-        <div class="view-side" style="position: fixed; padding-right: 50px">
+        <div class="view-side pos-fixed p-right-50">
           <div class="intro">
             <el-card shadow="hover">
               <p>Envision Articles 允许用文章的形式记录生活灵感、分享技术心得、交流学习经验。</p>

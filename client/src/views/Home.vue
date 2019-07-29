@@ -12,7 +12,7 @@
     <div class="section-content">
       <el-row :gutter="30">
         <el-col :lg="8" :xs="24" v-for="news in newsList" :key="news.title">
-          <e-card :title="news.title" style="margin-bottom: 20px"></e-card>
+          <e-card :title="news.title" class="m-bottom-20"></e-card>
         </el-col>
       </el-row>
     </div>
@@ -25,7 +25,7 @@
     <div class="section-content">
       <el-row :gutter="30">
         <el-col :lg="8" :xs="24" v-for="news in newsList" :key="news.title">
-          <a-card style="margin-bottom: 20px"></a-card>
+          <a-card class="m-bottom-20"></a-card>
         </el-col>
       </el-row>
     </div>
@@ -38,7 +38,7 @@
     <div class="section-content">
       <el-row :gutter="30">
         <el-col :lg="8" :xs="24" v-for="news in newsList" :key="news.title">
-          <q-card style="margin-bottom: 20px"></q-card>
+          <q-card class="m-bottom-20"></q-card>
         </el-col>
       </el-row>
     </div>
@@ -51,7 +51,7 @@
     <div class="section-content">
       <el-row :gutter="30">
         <el-col :lg="6" :xs="24" v-for="news in 4" :key="news.title">
-          <u-card style="margin-bottom: 20px"></u-card>
+          <u-card class="m-bottom-20"></u-card>
         </el-col>
       </el-row>
     </div>

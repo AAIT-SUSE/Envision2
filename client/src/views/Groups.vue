@@ -35,7 +35,7 @@
       </el-col>
       <!-- Right Panel -->
       <el-col :span="5" class="hidden-md-and-down">
-        <div class="view-side" style="position: fixed; padding-right: 50px">
+        <div class="view-side pos-fixed p-right-50">
           <div class="intro">
             <el-card shadow="hover">
               <p>Envision Groups 是人工智能技术协会开展学习交流、技术培训与分享的基本单位。</p>
@@ -92,14 +92,3 @@
     margin: 20px 0;
   }
 </style>
-
-<!--<style>-->
-<!--  .el-collapse-item__content {-->
-<!--    padding-bottom: 0;-->
-<!--  }-->
-<!--  .view-side .el-card__body {-->
-<!--    font-size: 13px;-->
-<!--    padding-top: 0;-->
-<!--    padding-bottom: 0;-->
-<!--  }-->
-<!--</style>-->
