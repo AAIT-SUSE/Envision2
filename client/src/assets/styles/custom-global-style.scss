@@ -1,4 +1,8 @@
-/* Global style rules that uses in most of the views and/or components */
+/*
+ * Global style rules that uses in most of the views and/or components
+ * NOTE: only when rules are used through multiple components/views
+         can be placed here. Otherwise just use scoped style tag.
+*/
 
 /*==================== Main navigation views ====================*/
 /* Sidebar quick action buttons icon size */

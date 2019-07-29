@@ -1,3 +1,7 @@
+import { Quill } from 'vue-quill-editor'
+import ImageResize from 'quill-image-resize-module-withfix'
+Quill.register('modules/ImageResize', ImageResize);
+
 const toolbarOptions = [
   ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
   ['blockquote', 'code-block'],
@@ -18,7 +22,10 @@ const toolbarOptions = [
 const editorConfigFull = {
   placeholder: '点击此处输入内容...',
   modules: {
-    toolbar: toolbarOptions
+    toolbar: toolbarOptions,
+    ImageResize: {
+      modules: [ 'Resize', 'DisplaySize', 'Toolbar' ]
+    }
   }
 };
 
