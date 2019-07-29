@@ -24,8 +24,8 @@
 
           <el-row type="flex" justify="space-between" class="control">
             <el-col>
-              <el-tooltip placement="bottom" content="购物车">
-                <el-button icon="envision-gouwuchefill" circle></el-button>
+              <el-tooltip placement="bottom" content="快速发表">
+                <el-button icon="el-icon-upload" circle></el-button>
               </el-tooltip>
             </el-col>
             <el-col>
@@ -64,26 +64,3 @@
     }
   }
 </script>
-
-<style scoped>
-  .view-side {
-    margin-left: 50px;
-  }
-  .view-side > .control {
-    text-align: center;
-  }
-  .view-side > .intro {
-    margin: 20px 0;
-  }
-</style>
-
-<style>
-  .el-collapse-item__content {
-    padding-bottom: 0;
-  }
-  .view-side .el-card__body {
-    font-size: 13px;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-</style>

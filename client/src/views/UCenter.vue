@@ -27,6 +27,7 @@
             <el-tab-pane label="提问" name="my-questions"></el-tab-pane>
             <el-tab-pane label="回答" name="my-answers"></el-tab-pane>
             <el-tab-pane label="群组" name="my-groups"></el-tab-pane>
+            <el-tab-pane label="收藏" name="my-collections"></el-tab-pane>
           </el-tabs>
           <router-view class="user-main-left"></router-view>
         </el-col>
@@ -132,7 +133,9 @@
     font-size: 13px;
   }
   .user-main-left {
-    border: 1px solid #E4E7ED;
-    margin-top: -16px;
+    border-left: 1px solid #E4E7ED;
+    border-right: 1px solid #E4E7ED;
+    border-bottom: 1px solid #E4E7ED;
+    margin-top: -32px;
   }
 </style>

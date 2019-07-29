@@ -93,13 +93,13 @@
   }
 </style>
 
-<style>
-  .el-collapse-item__content {
-    padding-bottom: 0;
-  }
-  .view-side .el-card__body {
-    font-size: 13px;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-</style>
+<!--<style>-->
+<!--  .el-collapse-item__content {-->
+<!--    padding-bottom: 0;-->
+<!--  }-->
+<!--  .view-side .el-card__body {-->
+<!--    font-size: 13px;-->
+<!--    padding-top: 0;-->
+<!--    padding-bottom: 0;-->
+<!--  }-->
+<!--</style>-->

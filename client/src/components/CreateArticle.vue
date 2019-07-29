@@ -51,7 +51,10 @@
 
     <quill-editor v-model="article.content" :options="config"></quill-editor>
 
-    <el-button>上传文章</el-button>
+    <div class="creation-control">
+      <el-button type="primary" size="small">上传文章</el-button>
+      <el-button size="small">保存草稿</el-button>
+    </div>
   </div>
 </template>
 
@@ -127,11 +130,17 @@
     height: 200px;
     display: block;
   }
+  .creation-control {
+    text-align: right;
+  }
 </style>
 
 <style>
   .ql-container {
-    min-height: 400px;
+    min-height: 500px;
+    max-height: 500px;
+    overflow-y: scroll;
+    margin-bottom: 20px;
   }
   .article-cover-uploader .el-upload {
     width: 100%;
