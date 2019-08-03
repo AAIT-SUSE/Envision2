@@ -14,6 +14,7 @@ const giftShop = () => import('../views/GiftShop.vue');
 const hof = () => import('../views/HallOfFame.vue');
 const create = () => import('../views/Create.vue');
 const uCenter = () => import('../views/UCenter.vue');
+const articleDetail = () =>import('../views/ArticleDetail.vue');
 
 /*
   Import Subviews
@@ -29,6 +30,10 @@ const myGroup = () => import('../components/UCenterGroup.vue');
  */
 export default new Router({
   routes: [
+    {
+      path: '',
+      redirect: '/main'
+    },
     {
       path: '/main',
       component: main,
@@ -104,5 +109,10 @@ export default new Router({
         },
       ]
     },
+    {
+      path: '/article/:id',
+      name: 'article-detail',
+      component: articleDetail
+    }
   ]
 })

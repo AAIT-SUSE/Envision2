@@ -10,6 +10,7 @@
   "dependencies": {
     "core-js": "^2.6.5",
     "element-ui": "^2.4.5",
+    "highlightjs": "^9.12.0",
     "node-sass": "^4.12.0",
     "quill-image-resize-module-withfix": "^4.0.1",
     "sass-loader": "^7.1.0",

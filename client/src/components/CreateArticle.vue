@@ -97,7 +97,7 @@
       uploadSuccess(res, file) {
         this.article.titleImageUrl = URL.createObjectURL(file.raw);
       },
-    }
+    },
   }
 </script>
 

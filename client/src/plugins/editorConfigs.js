@@ -1,3 +1,4 @@
+import hljs from 'highlightjs'
 import { Quill } from 'vue-quill-editor'
 import ImageResize from 'quill-image-resize-module-withfix'
 Quill.register('modules/ImageResize', ImageResize);
@@ -24,9 +25,12 @@ const editorConfigFull = {
   modules: {
     toolbar: toolbarOptions,
     ImageResize: {
-      modules: [ 'Resize', 'DisplaySize', 'Toolbar' ]
+      modules: [ 'Resize', 'DisplaySize' ]
+    },
+    syntax: {
+      highlight: text => hljs.highlightAuto(text).value
     }
-  }
+  },
 };
 
 export default editorConfigFull;
