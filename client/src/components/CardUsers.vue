@@ -40,21 +40,4 @@
     color: #909399;
     margin-top: 0;
   }
-  .card-actions {
-    margin-top: 6px;
-    text-align: right;
-  }
-  .card-actions > .context {
-    font-size: 12px;
-    float: left;
-    color: #909399;
-    line-height: 25px;
-    margin-top: 5px;
-  }
-</style>
-
-<style>
-  .el-card__body {
-    padding-bottom: 14px;
-  }
 </style>

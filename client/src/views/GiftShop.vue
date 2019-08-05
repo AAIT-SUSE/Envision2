@@ -36,7 +36,7 @@
         </div>
       </el-col>
       <!-- Right Panel -->
-      <el-col :span="5" class="hidden-md-and-down">
+      <div class="hidden-md-and-down">
         <div class="view-side pos-fixed p-right-50">
           <div class="intro">
             <el-card shadow="hover">
@@ -63,7 +63,7 @@
             </el-col>
           </el-row>
         </div>
-      </el-col>
+      </div>
     </el-row>
   </div>
 </template>

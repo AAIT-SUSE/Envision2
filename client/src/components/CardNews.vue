@@ -28,33 +28,3 @@
     }
   }
 </script>
-
-<style scoped>
-  .card-title > h4 {
-    font-size: 16px;
-    margin: 0;
-  }
-  .card-content {
-    font-size: 12px;
-    color: #909399;
-  }
-  .card-content > .intro {
-    overflow: hidden;
-    line-height: 18px;
-    text-overflow: ellipsis;
-    height: 36px;
-  }
-  .card-content > .info > .username {
-    margin-left: 5px
-  }
-  .card-content > .info > .time {
-    display: inline-block;
-    float: right;
-    line-height: 30px;
-    padding-right: 5px
-  }
-  .card-actions {
-    margin-top: 6px;
-    text-align: right;
-  }
-</style>

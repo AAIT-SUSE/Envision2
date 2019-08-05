@@ -4,25 +4,22 @@
       <!-- Main View -->
       <el-col :md=24 :lg=19>
         <div class="view-main">
-          <el-button type="text" icon="el-icon-arrow-left">返回文章列表</el-button>
-          <h2>文章标题</h2>
+          <el-link type="info" href="#/articles"><i class="el-icon-arrow-left"></i>返回文章列表</el-link>
+          <h2>JavaScript 中的闭包与函数</h2>
           <div class="article-author-area">
             <avatar username="Owen Tsai" style="display: inline-block" :size="40"></avatar>
-            <span>文章作者 发表于 2019-01-02</span>
+            <span>Owen Tsai 发表于 2019-01-02 17:00</span>
           </div>
 
           <!-- main content goes here -->
           <div class="view-card-container"></div>
-
         </div>
       </el-col>
       <!-- Right Panel -->
-      <el-col :span="5" class="hidden-md-and-down">
+      <div class="hidden-md-and-down">
         <div class="view-side pos-fixed p-right-50">
           <div class="intro">
-            <el-card shadow="hover">
-              <p>123 个赞</p>
-            </el-card>
+            <card-ad></card-ad>
           </div>
 
           <el-row type="flex" justify="space-between" class="control">
@@ -43,16 +40,20 @@
             </el-col>
           </el-row>
         </div>
-      </el-col>
+      </div>
     </el-row>
   </div>
 </template>
 
 <script>
-  import Avatar from "vue-avatar";
+  import Avatar from 'vue-avatar';
+  import CardAd from '../components/CardAd'
 
   export default {
-    components: {Avatar},
+    components: {
+      Avatar,
+      CardAd
+    },
     data:() => ({
 
     })
@@ -67,5 +68,8 @@
     font-size: 13px;
     color: #333;
     margin-left: 10px;
+  }
+  .ad-container {
+
   }
 </style>
