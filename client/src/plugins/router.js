@@ -15,6 +15,7 @@ const hof = () => import('../views/HallOfFame.vue');
 const create = () => import('../views/Create.vue');
 const uCenter = () => import('../views/UCenter.vue');
 const articleDetail = () =>import('../views/ArticleDetail.vue');
+const questionDetail = () =>import('../views/QuestionDetail.vue');
 
 /*
   Import Subviews
@@ -113,6 +114,11 @@ export default new Router({
       path: '/article/:id',
       name: 'article-detail',
       component: articleDetail
+    },
+    {
+      path: '/question/:id',
+      name: 'question-detail',
+      component: questionDetail
     }
   ]
 })

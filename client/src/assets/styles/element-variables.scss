@@ -2,7 +2,6 @@
 $--font-path: '~element-ui/lib/theme-chalk/fonts';
 
 @import "~element-ui/packages/theme-chalk/src/index";
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+SC&display=swap');
 
 /*
   Custom style rules below
@@ -26,12 +25,3 @@ $--font-weight-secondary: 100 !default;
 $--font-line-height-primary: 24px !default;
 /// fontLineHeight|1|Line Height|2
 $--font-line-height-secondary: 16px !default;
-
-/*
-  Clear body style
- */
-
-body {
-  font-family: 'Noto Sans SC', sans-serif;
-  margin: 0;
-}

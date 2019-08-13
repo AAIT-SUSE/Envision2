@@ -4,7 +4,7 @@
       <!-- Main View -->
       <el-col :md=24 :lg=19>
         <div class="view-main">
-          <el-link type="info" href="#/articles"><i class="el-icon-arrow-left"></i>返回文章列表</el-link>
+          <el-link type="info" href="#/articles"><i class="el-icon-arrow-left"></i>文章列表</el-link>
           <h2>JavaScript 中的闭包与函数</h2>
           <div class="article-author-area">
             <avatar username="Owen Tsai" style="display: inline-block" :size="40"></avatar>
@@ -68,8 +68,5 @@
     font-size: 13px;
     color: #333;
     margin-left: 10px;
-  }
-  .ad-container {
-
   }
 </style>
