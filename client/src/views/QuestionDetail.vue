@@ -86,12 +86,10 @@
     margin-left: 10px;
   }
   .question-description {
+    font-size: 14px;
     border: 1px solid #E4E7ED;
     border-radius: 10px;
     margin: 10px;
     padding: 0 20px;
-  }
-  .answers-container {
-
   }
 </style>
