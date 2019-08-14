@@ -12,7 +12,15 @@
           </div>
 
           <!-- main content goes here -->
-          <div class="view-card-container"></div>
+          <div class="view-card-container">
+            <div class="article-content"></div>
+            <div class="article-comment-wrapper">
+              <h3>评论</h3>
+              <div class="article-comments p-left-20 p-right-20" v-for="i in 4" :key="i">
+                <card-comment class="m-bottom-10"></card-comment>
+              </div>
+            </div>
+          </div>
         </div>
       </el-col>
       <!-- Right Panel -->
@@ -48,11 +56,13 @@
 <script>
   import Avatar from 'vue-avatar';
   import CardAd from '../components/CardAd'
+  import CardComment from '../components/CardComment'
 
   export default {
     components: {
       Avatar,
-      CardAd
+      CardAd,
+      CardComment
     },
     data:() => ({
 
@@ -68,5 +78,8 @@
     font-size: 13px;
     color: #333;
     margin-left: 10px;
+  }
+  .article-content {
+    margin: 20px 0;
   }
 </style>
