@@ -1,5 +1,5 @@
 <template>
-  <el-menu :default-active="$route.name" class="el-nav" mode="horizontal" @select="Redirect">
+  <el-menu :default-active="$route.path" router class="el-nav" mode="horizontal">
     <el-menu-item class="hidden-md-and-down no-active-mark">
       <img :src="logoTextSrc" alt="Envision" class="logo">
     </el-menu-item>
@@ -7,20 +7,20 @@
       <img :src="logoSrc" alt="Envision" class="logo">
     </el-menu-item>
 
-    <el-menu-item index="main" class="hidden-md-and-down">资讯</el-menu-item>
-    <el-menu-item index="groups" class="hidden-md-and-down">群组</el-menu-item>
-    <el-menu-item index="articles" class="hidden-md-and-down">文章</el-menu-item>
-    <el-menu-item index="questions" class="hidden-md-and-down">直答</el-menu-item>
+    <el-menu-item index="/main" class="hidden-md-and-down">资讯</el-menu-item>
+    <el-menu-item index="/groups" class="hidden-md-and-down">群组</el-menu-item>
+    <el-menu-item index="/articles" class="hidden-md-and-down">文章</el-menu-item>
+    <el-menu-item index="/questions" class="hidden-md-and-down">直答</el-menu-item>
 
     <el-submenu index="desktop-nav" class="hidden-md-and-down">
       <template slot="title">快速访问</template>
-      <el-menu-item index="gift-shop">礼品店</el-menu-item>
-      <el-menu-item index="hof">名人堂</el-menu-item>
-      <el-menu-item index="code-base">代码库</el-menu-item>
+      <el-menu-item index="/gift-shop">礼品店</el-menu-item>
+      <el-menu-item index="/hof">名人堂</el-menu-item>
+      <el-menu-item index="/code-base">代码库</el-menu-item>
       <el-submenu index="desktop-sub-nav" class="hidden-md-and-down">
         <template slot="title">创作</template>
-        <el-menu-item index="create-article">新文章</el-menu-item>
-        <el-menu-item index="create-question">新问题</el-menu-item>
+        <el-menu-item index="/create/article">新文章</el-menu-item>
+        <el-menu-item index="/create/question">新问题</el-menu-item>
       </el-submenu>
     </el-submenu>
 
@@ -52,13 +52,13 @@
     <!-- The following items only appear when using a small device like mobile phone -->
     <el-submenu index="mobile-nav" class="hidden-md-and-up">
       <template slot="title">导航</template>
-      <el-menu-item index="main">资讯</el-menu-item>
-      <el-menu-item index="groups">群组</el-menu-item>
-      <el-menu-item index="articles">文章</el-menu-item>
-      <el-menu-item index="questions">直答</el-menu-item>
-      <el-menu-item index="gift-shop">礼品店</el-menu-item>
-      <el-menu-item index="hof">名人堂</el-menu-item>
-      <el-menu-item index="code-base">代码库</el-menu-item>
+      <el-menu-item index="/main">资讯</el-menu-item>
+      <el-menu-item index="/groups">群组</el-menu-item>
+      <el-menu-item index="/articles">文章</el-menu-item>
+      <el-menu-item index="/questions">直答</el-menu-item>
+      <el-menu-item index="/gift-shop">礼品店</el-menu-item>
+      <el-menu-item index="/hof">名人堂</el-menu-item>
+      <el-menu-item index="/code-base">代码库</el-menu-item>
     </el-submenu>
   </el-menu>
 </template>
@@ -77,45 +77,6 @@
       searchInput: '',
     }),
     methods: {
-      Redirect(index) {
-        switch (index) {
-          case 'main':
-            this.$router.push('/main');
-            break;
-
-          case 'groups':
-            this.$router.push('/groups');
-            break;
-
-          case 'articles':
-            this.$router.push('/articles');
-            break;
-
-          case 'questions':
-            this.$router.push('/questions');
-            break;
-
-          case 'gift-shop':
-            this.$router.push('/gift-shop');
-            break;
-
-          case 'hof':
-            this.$router.push('/hof');
-            break;
-
-          case 'code-base':
-            this.$router.push('/code-base');
-            break;
-
-          case 'create-article':
-            this.$router.push('/create/article');
-            break;
-
-          case 'create-question':
-            this.$router.push('/create/question');
-            break;
-        }
-      },
       UserDropdownCommand(command) {
         switch (command) {
           case 'profile':

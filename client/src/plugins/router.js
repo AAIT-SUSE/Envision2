@@ -16,6 +16,7 @@ const create = () => import('../views/Create.vue');
 const uCenter = () => import('../views/UCenter.vue');
 const articleDetail = () =>import('../views/ArticleDetail.vue');
 const questionDetail = () =>import('../views/QuestionDetail.vue');
+const groupDetail = () =>import('../views/GroupDetail.vue');
 
 /*
   Import Subviews
@@ -119,6 +120,11 @@ export default new Router({
       path: '/question/:id',
       name: 'question-detail',
       component: questionDetail
+    },
+    {
+      path: '/group/:id',
+      name: 'group-detail',
+      component: groupDetail
     }
   ]
 })

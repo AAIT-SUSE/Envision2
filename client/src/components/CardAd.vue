@@ -1,12 +1,4 @@
 <template>
-<!--  <el-card :body-style="style" shadow="none">-->
-<!--    <div class="card-ad-content">-->
-<!--      <span>广告</span>-->
-<!--    </div>-->
-<!--    <div class="card-title">-->
-<!--      <h4><a href="">{{ title }}</a></h4>-->
-<!--    </div>-->
-<!--  </el-card>-->
   <div class="a-container" @click="HandleAdRedirect">
     <div class="a-helper">
       <span>广告</span>
@@ -47,7 +39,6 @@
     grid-template-areas: "title"
                          "helper";
     color: #fff;
-    /*background-image: url("https://unity.com/sites/default/files/styles/16_9_m/public/2019-07/SIGGRAPH-realtime-heretic-2.jpg?itok=CUCtBiMx");*/
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
