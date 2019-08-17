@@ -6,7 +6,7 @@
         <div class="view-main">
           <el-link type="info" href="#/groups"><i class="el-icon-arrow-left"></i>群组列表</el-link>
           <h2>C语言学习小组</h2>
-          <div class="article-author-area">
+          <div class="group-creator-area">
             <avatar username="Owen Tsai" style="display: inline-block" :size="40"></avatar>
             <span>Owen Tsai 创建于 2019-01-02 17:00</span>
           </div>
@@ -16,46 +16,28 @@
             <div class="group-pinned-alert"></div>
             <h3>通知与公告</h3>
             <div class="group-announcements">
-              <el-card class="pinned-news-1">
-                <div class="card-title">
-                  <h4>{{ pinnedNews.title }}</h4>
-                </div>
-                <div class="card-content">
-                  <p class="intro">文字节段内容文字节段内容文字节段内容文字节段内容文字节段内容文字节段内容文字节段内容文字节段内容文字节段内容</p>
-                  <div class="info">
-                    <avatar username="Owen Tsai" :size="30" style="display: inline-block;"></avatar>
-                    <span class="username">Owen Tsai</span>
-                    <span class="time">2019-06-22 19:00</span>
-                  </div>
-                </div>
-              </el-card>
+              <card-news class="pinned-news-1" title="测试通知"></card-news>
+              <card-news class="pinned-news-2" title="测试通知"></card-news>
 
-              <el-card class="pinned-news-2">
-                <div class="card-title">
-                  <h4>{{ pinnedNews.title }}</h4>
-                </div>
-                <div class="card-content">
-                  <p class="intro">文字节段内容文字节段内容文字节段内容文字节段内容文字节段内容文字节段内容文字节段内容文字节段内容文字节段内容</p>
-                  <div class="info">
-                    <avatar username="Owen Tsai" :size="30" style="display: inline-block;"></avatar>
-                    <span class="username">Owen Tsai</span>
-                    <span class="time">2019-06-22 19:00</span>
-                  </div>
-                </div>
-              </el-card>
-
-              <el-card class="news-list" shadow="none">
-                <h4>更多通知</h4>
-                <ul>
-                  <li><a href="#">C语言学习小组一期培训通知</a></li>
-                  <li><a href="#">C语言学习小组一期培训通知</a></li>
-                  <li><a href="#">C语言学习小组一期培训通知</a></li>
-                  <li><a href="#">C语言学习小组一期培训通知</a></li>
-                  <li><a href="#">C语言学习小组一期培训通知</a></li>
-                </ul>
-              </el-card>
+              <div class="news-list">
+                <card-scroll>
+                  <ul>
+                    <li><i class="el-icon-info"></i> <a href="#">[08-17 19:00] 这是一条测试新闻</a></li>
+                    <li><i class="el-icon-info"></i> <a href="#">[08-17 19:00] 这是一条测试新闻</a></li>
+                    <li><i class="el-icon-info"></i> <a href="#">[08-17 19:00] 这是一条测试新闻</a></li>
+                    <li><i class="el-icon-info"></i> <a href="#">[08-17 19:00] 这是一条测试新闻</a></li>
+                    <li><i class="el-icon-info"></i> <a href="#">[08-17 19:00] 这是一条测试新闻</a></li>
+                    <li><i class="el-icon-info"></i> <a href="#">[08-17 19:00] 这是一条测试新闻</a></li>
+                    <li><i class="el-icon-info"></i> <a href="#">[08-17 19:00] 这是一条测试新闻</a></li>
+                    <li><i class="el-icon-info"></i> <a href="#">[08-17 19:00] 这是一条测试新闻</a></li>
+                  </ul>
+                </card-scroll>
+              </div>
             </div>
-            <div class="group-tasks"></div>
+            
+            <div class="group-tasks">
+
+            </div>
             <div class="group-member-list"></div>
           </div>
         </div>
@@ -100,15 +82,17 @@
 
 <script>
   import Avatar from 'vue-avatar';
+  import CardScroll from '../components/CardScroll';
+  import CardNews from '../components/CardNews';
 
   export default {
     components: {
       Avatar,
+      CardScroll,
+      CardNews
     },
     data:() => ({
-      pinnedNews: {
-        title: 'C语言学习小组一期培训通知'
-      }
+      
     })
   }
 </script>
@@ -116,11 +100,12 @@
 <style lang="scss" scoped>
   .article-author-area {
     vertical-align: middle;
-  }
-  .article-author-area > span {
-    font-size: 13px;
-    color: #333;
-    margin-left: 10px;
+
+    span {
+      font-size: 13px;
+      color: #333;
+      margin-left: 10px;
+    }
   }
   .article-content {
     margin: 20px 0;
@@ -134,7 +119,7 @@
   .group-announcements {
     margin-top: 20px;
     display: grid;
-    grid-template-rows: 160px;
+    grid-template-rows: auto;
     grid-template-columns: 35% 35% 30%;
     grid-template-areas: "pinned1 pinned2 others";
     grid-gap: 20px;
@@ -145,15 +130,40 @@
     .pinned-news-2 {
       grid-area: pinned2;
     }
-    .news-list {
+  }
+  .news-list {
+    ul {
       font-size: 13px;
-      grid-area: others;
-      height: 160px;
+      height: 120px;
       overflow-y: scroll;
+      margin: 0;
+      padding-left: 20px;
 
-      h4 {
-        margin-top: 0;
+      :nth-child(1) {
+        margin-top: 8px;
       }
+      :nth-last-child(1) {
+        margin-bottom: 8px;
+      }
+
+      li {
+        list-style: none;
+
+        i {
+          margin-right: 5px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  a {
+    color: #606266;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      color: #409eff;
     }
   }
 </style>

@@ -4,7 +4,11 @@
       <h4>{{ title }}</h4>
     </div>
     <div class="card-content">
-      <p class="intro">文字节段内容文字节段内容文字节段内容文字节段内容文字节段内容文字节段内容文字节段内容文字节段内容文字节段内容</p>
+      <div class="importtant-info">
+        <p><strong>时效期至：</strong>2019-08-31 19:00</p>
+        <p><strong>通知对象：</strong>人工智能技术协会C语言小组成员</p>
+      </div>
+      <p class="intro"><strong>摘要：</strong>文字节段内容文字节段内容文字节段内容文字节段内容文字节段内容文字节段内容文字节段内容文字节段内容文字节段内容</p>
       <div class="info">
         <avatar username="Owen Tsai" :size="30" style="display: inline-block;"></avatar>
         <span class="username">Owen Tsai</span>
