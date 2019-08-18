@@ -35,8 +35,18 @@
               </div>
             </div>
             
+            <h3>任务</h3>
             <div class="group-tasks">
-
+              <el-card class="task-container" shadow="none">
+                <div class="card-title">
+                  <h4>C语言第一周练习题</h4>
+                </div>
+              </el-card>
+              <el-card class="task-status" shadow="none">
+                <div class="card-title">
+                  <h4>任务情况汇总</h4>
+                </div>
+              </el-card>
             </div>
             <div class="group-member-list"></div>
           </div>
@@ -49,7 +59,8 @@
             <el-card shadow="hover">
               <h4 style="text-align: center">群组情报</h4>
               <div class="group-info">
-                <p><icon class="el-icon-date"></icon><span> 创建日期 2019-01-02 17:00</span></p>
+                <p>我不是这个小组的成员 <a href="#">[点击申请]</a></p>
+                <p><icon class="el-icon-date"></icon><span> 创建日期 2019-01-02</span></p>
                 <p><icon class="el-icon-sort"></icon><span> 综合评定 10</span></p>
                 <p><icon class="el-icon-user"></icon><span> 成员人数 69</span></p>
                 <p><icon class="el-icon-coin"></icon><span> 每周奖励 60 x Envision积分</span></p>
@@ -98,7 +109,7 @@
 </script>
 
 <style lang="scss" scoped>
-  .article-author-area {
+  .group-creator-area {
     vertical-align: middle;
 
     span {
@@ -106,9 +117,6 @@
       color: #333;
       margin-left: 10px;
     }
-  }
-  .article-content {
-    margin: 20px 0;
   }
   .group-info{
     padding-bottom: 10px;
@@ -134,7 +142,7 @@
   .news-list {
     ul {
       font-size: 13px;
-      height: 120px;
+      height: 200px;
       overflow-y: scroll;
       margin: 0;
       padding-left: 20px;
@@ -154,6 +162,21 @@
           font-size: 16px;
         }
       }
+    }
+  }
+
+  .group-tasks {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-auto-rows: 1fr;
+    grid-template-areas: "task stat";
+    grid-gap: 20px;
+
+    .task-container {
+      grid-area: task;
+    }
+    .task-status {
+      grid-area: stat;
     }
   }
 
