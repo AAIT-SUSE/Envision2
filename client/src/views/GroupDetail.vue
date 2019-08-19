@@ -34,7 +34,7 @@
                 </card-scroll>
               </div>
             </div>
-            
+
             <h3>任务</h3>
             <div class="group-tasks">
               <el-card class="task-container" shadow="none">
@@ -48,6 +48,8 @@
                 </div>
               </el-card>
             </div>
+
+            <h3>成员</h3>
             <div class="group-member-list"></div>
           </div>
         </div>
@@ -59,8 +61,8 @@
             <el-card shadow="hover">
               <h4 style="text-align: center">群组情报</h4>
               <div class="group-info">
-                <p>我不是这个小组的成员 <a href="#">[点击申请]</a></p>
-                <p><icon class="el-icon-date"></icon><span> 创建日期 2019-01-02</span></p>
+                <p>我不是这个小组的成员 <a href="#">申请加入</a></p>
+                <p><icon class="el-icon-date"></icon><span> 创建日期 2019-01-02 17:00</span></p>
                 <p><icon class="el-icon-sort"></icon><span> 综合评定 10</span></p>
                 <p><icon class="el-icon-user"></icon><span> 成员人数 69</span></p>
                 <p><icon class="el-icon-coin"></icon><span> 每周奖励 60 x Envision积分</span></p>
@@ -118,6 +120,9 @@
       margin-left: 10px;
     }
   }
+  .article-content {
+    margin: 20px 0;
+  }
   .group-info{
     padding-bottom: 10px;
     p {
@@ -128,7 +133,7 @@
     margin-top: 20px;
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: 35% 35% 30%;
+    grid-template-columns: 35% 35% auto;
     grid-template-areas: "pinned1 pinned2 others";
     grid-gap: 20px;
 
@@ -167,8 +172,8 @@
 
   .group-tasks {
     display: grid;
-    grid-template-columns: 60% 40%;
-    grid-auto-rows: 1fr;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: auto;
     grid-template-areas: "task stat";
     grid-gap: 20px;
 
@@ -181,12 +186,11 @@
   }
 
   a {
-    color: #606266;
+    color: #409eff;
     text-decoration: none;
 
     &:hover {
       text-decoration: underline;
-      color: #409eff;
     }
   }
 </style>

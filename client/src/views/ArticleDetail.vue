@@ -6,7 +6,7 @@
         <div class="view-main">
           <el-link type="info" href="#/articles"><i class="el-icon-arrow-left"></i>文章列表</el-link>
           <h2>JavaScript 中的闭包与函数</h2>
-          <div class="content-creator-area">
+          <div class="article-author-area">
             <avatar username="Owen Tsai" style="display: inline-block" :size="40"></avatar>
             <span>Owen Tsai 发表于 2019-01-02 17:00</span>
           </div>

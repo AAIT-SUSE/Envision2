@@ -1,4 +1,4 @@
-import hljs from 'highlight.js'
+import hljs from 'highlightjs'
 import { Quill } from 'vue-quill-editor'
 import ImageResize from 'quill-image-resize-module-withfix'
 Quill.register('modules/ImageResize', ImageResize);

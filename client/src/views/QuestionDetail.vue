@@ -6,7 +6,7 @@
         <div class="view-main">
           <el-link type="info" href="#/questions"><i class="el-icon-arrow-left"></i>问题列表</el-link>
           <h2>ES6中还有没有使用闭包的必要？</h2>
-          <div class="content-creator-area">
+          <div class="question-author-area">
             <avatar username="Owen Tsai" style="display: inline-block" :size="40"></avatar>
             <span>Owen Tsai 提问于 2019-01-02 17:00</span>
           </div>
