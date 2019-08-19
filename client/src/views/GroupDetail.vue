@@ -14,7 +14,7 @@
           <!-- main content goes here -->
           <div class="view-card-container">
             <div class="group-pinned-alert"></div>
-            <h3>通知与公告</h3>
+            <h3>通知公告 | ANNOUNCEMENTS</h3>
             <div class="group-announcements">
               <card-news class="pinned-news-1" title="测试通知"></card-news>
               <card-news class="pinned-news-2" title="测试通知"></card-news>
@@ -35,7 +35,7 @@
               </div>
             </div>
 
-            <h3>任务</h3>
+            <h3>任务考核 | TASKS</h3>
             <div class="group-tasks">
               <el-card class="task-container" shadow="none">
                 <div class="card-title">
@@ -49,8 +49,24 @@
               </el-card>
             </div>
 
-            <h3>成员</h3>
-            <div class="group-member-list"></div>
+            <h3>成员资格 | MEMBERSHIP</h3>
+            <div class="group-membership">
+              <div class="membership-condition" shadow="none">
+                <el-alert
+                  title="成员资格声明"
+                  type="warning"
+                  description="该群组是申请制群组，你必须同意并遵守群组的成员条款，并递交一份申请；当申请获批后，你将成为该群组成员，且右侧会显示你的专属身份名片。"
+                  style="margin-bottom: 10px" 
+                  show-icon>
+                </el-alert>
+                <el-card shadow="none">
+                  
+                </el-card>
+              </div>
+              <div class="members-list">
+                
+              </div>
+            </div>
           </div>
         </div>
       </el-col>
@@ -62,10 +78,10 @@
               <h4 style="text-align: center">群组情报</h4>
               <div class="group-info">
                 <p>我不是这个小组的成员 <a href="#">申请加入</a></p>
-                <p><icon class="el-icon-date"></icon><span> 创建日期 2019-01-02 17:00</span></p>
-                <p><icon class="el-icon-sort"></icon><span> 综合评定 10</span></p>
-                <p><icon class="el-icon-user"></icon><span> 成员人数 69</span></p>
-                <p><icon class="el-icon-coin"></icon><span> 每周奖励 60 x Envision积分</span></p>
+                <p><i class="el-icon-date"></i><span> 创建日期 2019-01-02</span></p>
+                <p><i class="el-icon-sort"></i><span> 综合评定 10</span></p>
+                <p><i class="el-icon-user"></i><span> 成员人数 69</span></p>
+                <p><i class="el-icon-coin"></i><span> 每周奖励 60 x Envision积分</span></p>
               </div>
             </el-card>
           </div>
@@ -105,7 +121,7 @@
       CardNews
     },
     data:() => ({
-      
+      isGroupMember: false,
     })
   }
 </script>
@@ -174,14 +190,35 @@
     display: grid;
     grid-template-columns: 3fr 2fr;
     grid-template-rows: auto;
-    grid-template-areas: "task stat";
+    grid-template-areas: "left right";
     grid-gap: 20px;
 
     .task-container {
-      grid-area: task;
+      grid-area: left;
     }
     .task-status {
-      grid-area: stat;
+      grid-area: right;
+    }
+  }
+
+  .group-membership {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas: "left right";
+    grid-gap: 20px;
+
+    .membership-condition {
+      grid-area: left;
+    }
+    .members-list {
+      grid-area: right;
+    }
+  }
+
+  .group-membership {
+    p {
+      font-size: 14px;
     }
   }
 
